@@ -1,4 +1,7 @@
 UnicornService::Application.routes.draw do
+  resources :beacons
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
