@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  root to: 'beacons#index'
+
+  resources :engagements
+
+  resources :beacons
+
+  resources :unicorns
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

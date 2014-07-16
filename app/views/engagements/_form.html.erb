@@ -1,0 +1,29 @@
+<%= form_for(@engagement) do |f| %>
+  <% if @engagement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@engagement.errors.count, "error") %> prohibited this engagement from being saved:</h2>
+
+      <ul>
+      <% @engagement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :beacon_id %><br>
+    <%= f.number_field :beacon_id %>
+  </div>
+  <div class="field">
+    <%= f.label :unicorn_id %><br>
+    <%= f.number_field :unicorn_id %>
+  </div>
+  <div class="field">
+    <%= f.label :engagement_date %><br>
+    <%= f.datetime_select :engagement_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
