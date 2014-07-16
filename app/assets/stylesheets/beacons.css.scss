@@ -1,3 +1,29 @@
 // Place all the styles related to the Beacons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.beacon {
+  margin-bottom: 1%;
+  width: 32.2%;
+  float: left;
+  margin-right: 1%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #ECF0F1;
+  min-height: 180px;
+  position: relative;
+}
+
+.beacon .location {
+  display: inline-block;
+}
+
+.beacon .number {
+  vertical-align: middle;
+  float: right;
+  margin: 0;
+}
+
+.unicorn {
+  margin-top: 10px;
+}
+

@@ -5,9 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-beacons = Beacon.create([{UUID: 'E2C56DB5-DFFB-48D2-B060-D0F5A71096E0', major: '1000', minor: '4000', location: 'my home'},
-                         {UUID: 'E2C56DB5-DFFB-48D2-B060-D0F5A71096E0', major: '1000', minor: '5000', location: 'my home'},
-                         {UUID: 'E2C56DB5-DFFB-48D2-B060-D0F5A71096E0', major: '1000', minor: '6000', location: 'my home'},
+beacons = Beacon.create([{UUID: 'E2C56DB5-DFFB-48D2-B060-D0F5A71096E0', major: '1000', minor: '1000', location: 'my home'},
+                         {UUID: 'E2C56DB5-DFFB-48D2-B060-D0F5A71096E0', major: '1000', minor: '2000', location: 'room 1'},
+                         {UUID: 'E2C56DB5-DFFB-48D2-B060-D0F5A71096E0', major: '1000', minor: '3000', location: 'room 2'},
+                         {UUID: 'E2C56DB5-DFFB-48D2-B060-D0F5A71096E0', major: '1000', minor: '4000', location: 'room 3'},
+                         {UUID: 'E2C56DB5-DFFB-48D2-B060-D0F5A71096E0', major: '1000', minor: '5000', location: 'room 4'},
+                         {UUID: 'E2C56DB5-DFFB-48D2-B060-D0F5A71096E0', major: '1000', minor: '6000', location: 'room 5'},
+                         {UUID: 'E2C56DB5-DFFB-48D2-B060-D0F5A71096E0', major: '1000', minor: '7000', location: 'room 6'},
                         ])
 unicorns = []
 beacons.each { |_|

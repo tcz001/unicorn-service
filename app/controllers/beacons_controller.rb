@@ -1,6 +1,12 @@
 class BeaconsController < ApplicationController
   before_action :set_beacon, only: [:show, :edit, :update, :destroy]
 
+  # GET /engagements
+  # GET /engagements.json
+  def dashboard
+    @beacons = Beacon.all
+  end
+
   # GET /beacons
   # GET /beacons.json
   def index
