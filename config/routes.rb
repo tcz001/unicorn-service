@@ -1,4 +1,10 @@
 UnicornService::Application.routes.draw do
+  resources :engagements
+
+
+  resources :unicorns
+
+
   resources :beacons
 
 

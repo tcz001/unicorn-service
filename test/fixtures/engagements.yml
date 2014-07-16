@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  beacon_id: 1
+  unicorn_id: 1
+  engagement_date: 2014-07-16 18:08:08
+
+two:
+  beacon_id: 1
+  unicorn_id: 1
+  engagement_date: 2014-07-16 18:08:08
