@@ -1,4 +1,7 @@
 UnicornService::Application.routes.draw do
+  resources :unicorns
+
+
   resources :beacons
 
 
