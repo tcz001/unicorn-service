@@ -16,9 +16,11 @@ beacons = Beacon.create([{UUID: 'E2C56DB5-DFFB-48D2-B060-D0F5A71096E0', major: '
 unicorns = []
 beacons.each { |_|
   unicorns << Unicorn.create({name: 'Fake1'})
-  unicorns << Unicorn.create({name: 'Fake1'})
+  unicorns << Unicorn.create({name: 'Fake2'})
+  unicorns << Unicorn.create({name: 'Fake3'})
 }
 beacons.each { |beacon|
   Engagement.create(unicorn_id: unicorns[0].id, beacon_id: beacon.id)
   Engagement.create(unicorn_id: unicorns[1].id, beacon_id: beacon.id)
+  Engagement.create(unicorn_id: unicorns[2].id, beacon_id: beacon.id)
 }

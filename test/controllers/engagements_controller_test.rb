@@ -18,7 +18,7 @@ class EngagementsControllerTest < ActionController::TestCase
 
   test "should create engagement" do
     assert_difference('Engagement.count') do
-      post :create, engagement: { beacon_id: @engagement.beacon_id, engagement_date: @engagement.engagement_date, unicorn_id: @engagement.unicorn_id }
+      post :create, engagement: { beacon_id: @engagement.beacon_id, unicorn_id: @engagement.unicorn_id }
     end
 
     assert_redirected_to engagement_path(assigns(:engagement))
@@ -35,7 +35,7 @@ class EngagementsControllerTest < ActionController::TestCase
   end
 
   test "should update engagement" do
-    patch :update, id: @engagement, engagement: { beacon_id: @engagement.beacon_id, engagement_date: @engagement.engagement_date, unicorn_id: @engagement.unicorn_id }
+    patch :update, id: @engagement, engagement: { beacon_id: @engagement.beacon_id, unicorn_id: @engagement.unicorn_id }
     assert_redirected_to engagement_path(assigns(:engagement))
   end
 

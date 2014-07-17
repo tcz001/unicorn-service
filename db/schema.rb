@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140716110858) do
+ActiveRecord::Schema.define(version: 20140717074047) do
 
   create_table "beacons", force: true do |t|
     t.string   "UUID"
@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20140716110858) do
   create_table "engagements", force: true do |t|
     t.integer  "beacon_id"
     t.integer  "unicorn_id"
-    t.datetime "engagement_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

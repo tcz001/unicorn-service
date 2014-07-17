@@ -69,6 +69,6 @@ class EngagementsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def engagement_params
-      params.require(:engagement).permit(:beacon_id, :unicorn_id, :engagement_date)
+      params.require(:engagement).permit(:beacon_id, :unicorn_id)
     end
 end
