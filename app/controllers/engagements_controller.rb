@@ -1,5 +1,6 @@
 class EngagementsController < ApplicationController
   before_action :set_engagement, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :verify_authenticity_token
 
   # GET /engagements
   # GET /engagements.json
@@ -19,6 +20,31 @@ class EngagementsController < ApplicationController
 
   # GET /engagements/1/edit
   def edit
+  end
+
+  # POST /engage
+  # POST /engage.json
+  def engage
+    puts params.inspect
+    engage_param = params.require(:engage).permit(:UUID, :major, :minor)
+
+    @engagement = Engagement.new({:beacon_id => Beacon.find_by(
+        {:UUID => engage_param[:UUID],
+         :major => engage_param[:major],
+         :minor => engage_param[:minor]
+        }).id,
+                                  :unicorn_id => 1
+                                 })
+
+    respond_to do |format|
+      if @engagement.save
+        format.html { redirect_to @engagement, notice: 'Engagement was successfully created.' }
+        format.json { render :show, status: :created, location: @engagement }
+      else
+        format.html { render :new }
+        format.json { render json: @engagement.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # POST /engagements
