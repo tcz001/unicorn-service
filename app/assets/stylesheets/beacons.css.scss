@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .beacon {
   margin-bottom: 1%;
-  width: 32.2%;
+  min-width: 450px;
+  max-width: 32.2%;
   float: left;
   margin-right: 1%;
   padding: 10px;

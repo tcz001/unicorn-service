@@ -6,7 +6,7 @@
         <span class="number"><%=beacon.unicorns.count %></span>
         <% beacon.unicorns.each do |unicorn| %>
             <div class="unicorn">
-                <%=unicorn.name %>
+                <%= link_to unicorn.name, unicorn %>
             </div>
         <% end %>
     </div>
