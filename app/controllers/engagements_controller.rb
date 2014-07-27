@@ -5,7 +5,7 @@ class EngagementsController < ApplicationController
   # GET /engagements
   # GET /engagements.json
   def index
-    @engagements = Engagement.all
+    @engagements = Engagement.unscoped.all
   end
 
   # GET /engagements/1

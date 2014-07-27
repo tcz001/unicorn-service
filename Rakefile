@@ -4,3 +4,10 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
+
+desc 'clean up engagements'
+task :expire => :environment do
+  begin
+    Engagement.unscoped.expired.all.delete_all
+  end
+end
