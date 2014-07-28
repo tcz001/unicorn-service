@@ -1,6 +1,7 @@
 class EngagementsController < ApplicationController
   before_action :set_engagement, only: [:show, :edit, :update, :destroy]
-  skip_before_filter :verify_authenticity_token
+  skip_before_filter :verify_authenticity_token, only: :engage
+  skip_before_action :authenticate_unicorn!, only: :engage
 
   # GET /engagements
   # GET /engagements.json

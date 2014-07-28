@@ -1,5 +1,6 @@
 class BeaconsController < ApplicationController
   before_action :set_beacon, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_unicorn!, only: :dashboard
 
   # GET /engagements
   # GET /engagements.json
