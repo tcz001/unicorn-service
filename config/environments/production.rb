@@ -80,5 +80,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   config.time_zone = 'Beijing'
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.logger = Logger.new(STDOUT)
 end

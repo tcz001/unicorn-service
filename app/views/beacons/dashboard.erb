@@ -1,13 +1,17 @@
-<h1>Unicorn</h1>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-<% @beacons.each do |beacon| %>
-    <div class="beacon">
-        <h3 class="location"><%=beacon.location %></h3>
-        <span class="number"><%=beacon.unicorns.count %></span>
-        <% beacon.unicorns.each do |unicorn| %>
-            <div class="unicorn">
-                <%= link_to unicorn.name, unicorn %>
-            </div>
-        <% end %>
-    </div>
-<% end %>
+<h1>Unicorn</h1>
+<%= link_to 'Profile', current_unicorn %>
+<div class="dashboard">
+    <% @beacons.each do |beacon| %>
+        <div class="beacon">
+            <span class="location"><%=beacon.location %></span>
+            <span class="number"><%=beacon.unicorns.count %></span>
+            <% beacon.unicorns.each do |unicorn| %>
+                <div class="unicorn">
+                    <%= link_to unicorn.name, unicorn %>
+                </div>
+            <% end %>
+        </div>
+    <% end %>
+</div>
