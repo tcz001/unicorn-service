@@ -33,7 +33,7 @@ class EngagementsController < ApplicationController
          :major => engage_param[:major],
          :minor => engage_param[:minor]
         }).id,
-                                  :unicorn_id => engage_param[:unicorn_id]
+                                  :unicorn_id => Unicorn.find_by_email(engage_param[:unicorn_id]).id
                                  })
 
     respond_to do |format|
