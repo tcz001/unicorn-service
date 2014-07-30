@@ -1,0 +1,49 @@
+- model_class = Unicorn
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.titleize
+
+%p
+  %strong= model_class.human_attribute_name(:name) + ':'
+  %br
+  = @unicorn.name
+%p
+  %strong= model_class.human_attribute_name(:email) + ':'
+  %br
+  = @unicorn.email
+-#%p
+-#  %strong= model_class.human_attribute_name(:encrypted_password) + ':'
+-#  %br
+-#  = @unicorn.encrypted_password
+-#%p
+-#  %strong= model_class.human_attribute_name(:reset_password_token) + ':'
+-#  %br
+-#  = @unicorn.reset_password_token
+-#%p
+-#  %strong= model_class.human_attribute_name(:reset_password_sent_at) + ':'
+-#  %br
+-#  = @unicorn.reset_password_sent_at
+-#%p
+-#  %strong= model_class.human_attribute_name(:remember_created_at) + ':'
+-#  %br
+-#  = @unicorn.remember_created_at
+-#%p
+-#  %strong= model_class.human_attribute_name(:current_sign_in_at) + ':'
+-#  %br
+-#  = @unicorn.current_sign_in_at
+-#%p
+-#  %strong= model_class.human_attribute_name(:last_sign_in_at) + ':'
+-#  %br
+-#  = @unicorn.last_sign_in_at
+-#%p
+-#  %strong= model_class.human_attribute_name(:current_sign_in_ip) + ':'
+-#  %br
+-#  = @unicorn.current_sign_in_ip
+-#%p
+-#  %strong= model_class.human_attribute_name(:last_sign_in_ip) + ':'
+-#  %br
+-#  = @unicorn.last_sign_in_ip
+
+.form-actions
+  = link_to t('.back', :default => t("helpers.links.back")), unicorns_path, :class => 'btn'
+  = link_to t('.edit', :default => t("helpers.links.edit")), edit_unicorn_path(@unicorn), :class => 'btn'
+  = link_to t('.destroy', :default => t("helpers.links.destroy")), unicorn_path(@unicorn), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'

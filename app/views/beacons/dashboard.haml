@@ -1,0 +1,11 @@
+- model_class = Beacon
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+.dashboard
+  - @beacons.each do |beacon|
+    .beacon
+      %span.location= beacon.location
+      %span.number= beacon.unicorns.count
+      - beacon.unicorns.each do |unicorn|
+        .unicorn
+          = link_to unicorn.name, unicorn

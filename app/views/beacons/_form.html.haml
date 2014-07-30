@@ -1,0 +1,20 @@
+= form_for @beacon, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :UUID, :class => 'control-label'
+    .controls
+      = f.text_field :UUID, :class => 'text_field'
+  .control-group
+    = f.label :major, :class => 'control-label'
+    .controls
+      = f.text_field :major, :class => 'text_field'
+  .control-group
+    = f.label :minor, :class => 'control-label'
+    .controls
+      = f.text_field :minor, :class => 'text_field'
+  .control-group
+    = f.label :location, :class => 'control-label'
+    .controls
+      = f.text_field :location, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), beacons_path, :class => 'btn'

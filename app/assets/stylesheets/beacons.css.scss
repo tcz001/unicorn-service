@@ -2,11 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .beacon {
-  margin-bottom: 1%;
-  min-width: 450px;
+  min-width: 350px;
   max-width: 32.2%;
   float: left;
-  margin-right: 1%;
+  margin: 1%;
   padding: 10px;
   box-sizing: border-box;
   background: #ECF0F1;
@@ -16,11 +15,14 @@
 }
 
 .beacon .location {
+  font-size: 20px;
+  font-weight: bold;
   display: inline-block;
 }
 
 .beacon .number {
   vertical-align: middle;
+  color: green;
   float: right;
   margin: 0;
 }
@@ -30,5 +32,4 @@
 }
 
 .dashboard {
-
 }
