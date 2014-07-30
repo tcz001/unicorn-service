@@ -26,7 +26,6 @@ class EngagementsController < ApplicationController
   # POST /engage
   # POST /engage.json
   def engage
-    puts params.inspect
     engage_param = params.require(:engage).permit(:UUID, :major, :minor, :unicorn_id)
 
     @engagement = Engagement.new({:beacon_id => Beacon.find_by(

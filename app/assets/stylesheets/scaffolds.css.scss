@@ -1,5 +1,5 @@
 body {
-  background: url('background-2.jpg') no-repeat fixed center center;
+  background: #999 url('background-2.jpg') no-repeat fixed center center;
   background-size: 1600px 1200px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -20,12 +20,12 @@ pre {
 
 a {
   color: #000;
-  &:visited {
-    color: #333;
-  }
-  &:hover {
-    color: #fff;
-  }
+//  &:visited {
+//    color: #333;
+//  }
+//  &:hover {
+//    color: #fff;
+//  }
 }
 
 div {
